@@ -1,5 +1,6 @@
-# pawapro
-パワプロデータベース
+# パワプロ選手データベース
+APIからデータを取得して表示するjQuery練習用の課題。  
+自身もパワプロの選手データの管理を10年以上模索していたため、成果物を活用する目的で作成中。  
 [http://fe.lc-design.jp/sample/kimura/](http://fe.lc-design.jp/sample/kimura/)
 
 ## 機能
