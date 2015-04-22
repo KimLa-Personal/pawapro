@@ -703,11 +703,7 @@
 		App.api.doUrlParamCheck();
 
 		// ホスト名によってルート相対パスを変更
-		if(location.host == 'fe.lc-design.jp') {
-			App.global.SERVER_PATH = '/sample/kimura/pawapro/';
-		} else if(location.host == 'homepage2.nifty.com') {
-			App.global.SERVER_PATH = '/nastyboy/pawapro/pawapro/';
-		}
+		if(location.host == 'fe.lc-design.jp') App.global.SERVER_PATH = '/sample/kimura/pawapro/';
 
 		/** pagetopボタンの表示処理 */
 		if(!!$('#globalFooter .btnPagetop').length && fn.ua.isPc) btnPagetopView();
