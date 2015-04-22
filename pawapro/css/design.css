@@ -1,0 +1,516 @@
+@charset "UTF-8";
+/* ===================================================================
+
+ design.css
+
+======================================================================*/
+
+
+/* 共通デザイン *******************************************************/
+
+
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+#main { }
+
+
+/* contents
+--------------------------------------------------*/
+
+#contents { position: relative; }
+
+
+/*----------------------------------------------------------
+ parts
+------------------------------------------------------------*/
+
+
+/* param icon
+--------------------------------------------------*/
+
+[class^="iconParam"] {
+	background-repeat: no-repeat;
+	background-size: 16px 16px;
+}
+
+.iconParamS { background-image: url(../img/icon/s.png); }
+.iconParamA { background-image: url(../img/icon/a.png); }
+.iconParamB { background-image: url(../img/icon/b.png); }
+.iconParamC { background-image: url(../img/icon/c.png); }
+.iconParamD { background-image: url(../img/icon/d.png); }
+.iconParamE { background-image: url(../img/icon/e.png); }
+.iconParamF { background-image: url(../img/icon/f.png); }
+.iconParamG { background-image: url(../img/icon/g.png); }
+
+.iconParam1 { background-image: url(../img/icon/1.png); }
+.iconParam2 { background-image: url(../img/icon/2.png); }
+.iconParam3 { background-image: url(../img/icon/3.png); }
+.iconParam4 { background-image: url(../img/icon/4.png); }
+
+
+
+/* 共通デザインここまで ***********************************************/
+
+@media screen and (max-width: 640px){ /* スマホ用デザイン *************/
+
+
+
+/*----------------------------------------------------------
+ base
+------------------------------------------------------------*/
+
+#page {
+	max-width: 100%;
+	min-width: 320px;
+}
+
+.inner,
+.supplement {
+	box-sizing; border-box;
+	width: 100%;
+	overflow: hidden;
+}
+
+
+/*----------------------------------------------------------
+ header
+------------------------------------------------------------*/
+
+
+/* logo
+--------------------------------------------------*/
+
+#logo { padding: 5px 10px 10px; }
+
+#logo a {
+	display: block;
+	text-decoration: none;
+}
+
+#logo h1 {
+	margin-bottom: 5px;
+	font-size: 2em;
+	color: #111;
+	line-height: 0.5em;
+	font-style: italic;
+	letter-spacing: 0.001em;
+}
+#logo h1:first-letter {
+	font-size: 1.75em;
+	color: #039;
+}
+#logo a:hover h1 { text-shadow: 0 0 3px #bfd4ff; }
+
+#logo p:first-of-type {
+	margin-left: 37px;
+	font-size: 10px;
+	color: #aaa;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+/* globalNav
+--------------------------------------------------*/
+
+#globalNav {
+	background: #111;
+}
+
+#globalNav ul { overflow: hidden; }
+
+#globalNav li {
+	float: left;
+	width: 25%;
+}
+
+#globalNav li a {
+	display: block;
+	padding: 10px 5px;
+	border-right: 1px solid #fff;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+}
+#globalNav li:last-child a { border-right: none; }
+
+#globalNav li.current { opacity: 0.7; }
+
+
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+#main { }
+
+
+/* contents
+--------------------------------------------------*/
+
+#contents h1 {
+	margin-bottom: 15px;
+	padding: 7px;
+	background: #039;
+	color: #fff;
+}
+
+#contents h1 span {
+	margin-left: 10px;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+
+/* contentsNav
+--------------------------------------------------*/
+
+#contentsNav { border-top: 3px solid #bbb; }
+
+#contentsNav dt { display: none; }
+#contentsNav dd {
+	position: relative;
+	border-bottom: 1px solid #ddd;
+}
+
+#contentsNav a {
+	display: block;
+	padding: 15px;
+	color: #444;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#contentsNav dd:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 7px;
+	height: 7px;
+	margin-top: -4px;
+	border-top: 3px solid #ccc;
+	border-right: 3px solid #ccc;
+	-webkit-transform: rotate(45deg);
+}
+
+
+/*----------------------------------------------------------
+ footer
+------------------------------------------------------------*/
+
+#globalFooter {
+	padding: 20px 10px 10px;
+	border-top: 1px solid #eee;
+	overflow: hidden;
+}
+
+.btnPagetop { margin-bottom: 20px; }
+
+.btnPagetop a {
+	display: block;
+	padding: 15px 10px;
+	background: #ddd;
+	border-radius: 5px;
+	font-size: 14px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.copyright { text-align: center; }
+
+
+/*----------------------------------------------------------
+ thickbox
+------------------------------------------------------------*/
+
+#thickbox { display: none; }
+
+
+
+} /* スマホ用デザインここまで *****************************************/
+
+@media screen and (min-width: 641px){ /* PC用デザイン *****************/
+
+
+
+/*----------------------------------------------------------
+ base
+------------------------------------------------------------*/
+
+#page { position: relative; }
+
+.inner,
+.supplement {
+	max-width: 980px;
+	min-width: 860px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+
+/*----------------------------------------------------------
+ header
+------------------------------------------------------------*/
+
+#globalHeader {
+	padding: 10px 0;
+	border-bottom: 5px solid #333;
+	overflow: hidden;
+}
+
+
+/* logo
+--------------------------------------------------*/
+
+#logo {
+	float: left;
+	padding: 5px 0 0 10px;
+}
+
+#logo a {
+	display: block;
+	text-decoration: none;
+}
+
+#logo h1 {
+	font-size: 2.5em;
+	color: #111;
+	line-height: 0.7em;
+	font-style: italic;
+	letter-spacing: 0.001em;
+}
+#logo h1:first-letter {
+	font-size: 1.8em;
+	color: #039;
+}
+#logo a:hover h1 { text-shadow: 0 0 3px #bfd4ff; }
+
+#logo p:first-of-type {
+	margin-left: 107px;
+	font-size: 10px;
+	color: #aaa;
+	font-weight: bold;
+	font-style: italic;
+}
+
+
+/* globalNav
+--------------------------------------------------*/
+
+#globalNav {
+	float: right;
+	padding-top: 20px;
+}
+
+#globalNav ul { overflow: hidden; }
+
+#globalNav li {
+	float: left;
+	margin-left: 1px;
+}
+#globalNav li:first-child { margin-left: 0; }
+
+#globalNav li a {
+	display: block;
+	padding: 7px 25px;
+	background: #111;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	cursor: default;
+}
+#globalNav li:first-child a { border-radius: 3px 0 0 3px; }
+#globalNav li:last-child a { border-radius: 0 3px 3px 0; }
+
+#globalNav li:not([class]) a:hover {
+	text-shadow: 0 0 4px #fff;
+	cursor: pointer;
+}
+
+#globalNav .current a { color: #aaa; }
+
+
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+#main { }
+
+#main .inner {
+	display: -webkit-box;
+	position: relative;
+	padding: 20px 0 30px;
+}
+
+
+/* contents
+------------------------------------------------------------*/
+
+#contents {
+	-webkit-box-ordinal-group: 2;
+	-webkit-box-flex: 1;
+}
+
+#contents h1 {
+	margin-bottom: 20px;
+	padding: 4px 13px;
+	border-radius: 5px;
+	font-size: 1.34em;
+}
+
+#contents h1 span {
+	margin-left: 15px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+/* contentsNav
+--------------------------------------------------*/
+
+#contentsNav {
+	-webkit-box-ordinal-group: 1;
+	width: 220px;
+	margin-right: 15px;
+}
+
+#contentsNav dl { padding-right: 15px; }
+#contentsNav dd { margin-top: 1px; }
+
+#contentsNav a {
+	display: block;
+	padding: 10px 15px;
+	font-weight: bold;
+	text-decoration: none;
+}
+#contentsNav dt {
+	padding: 35px 15px;
+	border-radius: 3px 3px 0 0;
+	font-size: 1.34em;
+	font-weight: bold;
+}
+
+#contentsNav .current a,
+#contentsNav a:hover {
+	position: relative;
+}
+
+#contentsNav .current a:after,
+#contentsNav a:hover:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: -5px;
+	width: 15px;
+	height: 15px;
+	margin-top: -7px;
+	-webkit-transform: rotate(45deg);
+}
+
+
+/*----------------------------------------------------------
+ footer
+------------------------------------------------------------*/
+
+#globalFooter {
+	padding: 15px;
+	border-top: 1px solid #eee;
+	overflow: hidden;
+}
+
+.bannerList { float: left; }
+
+.copyright { text-align: right; }
+
+
+/* btnPagetop
+--------------------------------------------------*/
+
+.btnPagetop {
+	position: fixed;
+	right: 15px;
+	bottom: 70px;
+}
+
+.btnPagetop a {
+	display: block;
+	padding: 15px;
+	background: #aaa;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	opacity: 0.3;
+}
+.btnPagetop a:hover { opacity: 0.7; }
+
+
+/*----------------------------------------------------------
+ thickbox
+------------------------------------------------------------*/
+
+#thickbox {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 20;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.6);
+}
+
+.thickboxInner {
+	width: 760px;
+	margin: 50px auto;
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 0 5px #000;
+}
+
+
+/* thickboxHeader
+--------------------------------------------------*/
+
+.thickboxHeader {
+	position: relative;
+	padding: 7px 20px 5px;
+	background: #ddd;
+	border-radius: 5px 5px 0 0;
+	font-size: 1.17em;
+	font-weight: bold;
+}
+
+.btnClose {
+	position: absolute;
+	top: 7px;
+	right: 7px;
+	cursor: pointer;
+}
+.btnClose:hover { opacity: 0.7; }
+
+
+/* thickboxBody
+--------------------------------------------------*/
+
+.thickboxBody { padding: 20px 0; }
+
+
+/*----------------------------------------------------------
+ loadingImage
+------------------------------------------------------------*/
+
+.loadingImage {
+	height: 300px;
+	margin-bottom: 30px;
+	background: url(../img/img_loading.gif) no-repeat 50% 50%;
+}
+
+} /* PC用デザインここまで *********************************************/

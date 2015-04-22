@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* ===================================================================
+
+ top.css
+
+======================================================================*/
+
+
+
+@media screen and (max-width: 640px){ /* スマホ用デザイン *************/
+
+
+
+} /* スマホ用デザインここまで *****************************************/
+
+@media screen and (min-width: 641px){ /* PC用デザイン *****************/
+
+
+.breakingBall {
+	position: relative;
+	width: 500px;
+	height: 300px;
+	border: 1px solid #eee;
+}
+
+.breakingBall li {
+	position: absolute;
+}
+
+.breakingBall li span {
+	display: block;
+}
+
+
+.breakingTop {
+	top: 0px;
+	left: 0px;
+}
+
+.breakingLeft {
+	top: 0px;
+	left: 0px;
+}
+
+.breakingLeftBottom {
+	top: 0px;
+	left: 0px;
+}
+
+.breakingBottom {
+	top: 0px;
+	left: 0px;
+}
+
+.breakingRightBottom {
+	top: 0px;
+	left: 0px;
+}
+
+.breakingRight {
+	top: 0px;
+	left: 0px;
+}
+
+
+} /* PC用デザインここまで *********************************************/

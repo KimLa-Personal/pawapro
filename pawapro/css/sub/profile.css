@@ -1,0 +1,1120 @@
+@charset "UTF-8";
+/* ===================================================================
+
+ profile.css
+
+======================================================================*/
+
+
+/* 共通デザイン *******************************************************/
+
+
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+
+
+
+/*----------------------------------------------------------
+ contents
+------------------------------------------------------------*/
+
+#profileArea .teamName {
+	color: #888;
+	font-weight: bold;
+}
+
+.profile-data dt,
+.profile-data dd {
+	padding: 5px;
+}
+
+.profile-data dt {
+	clear: left;
+	float: left;
+	width: 100px;
+}
+
+.profile-data dd { border-bottom: 1px dotted #ccc; }
+
+.profile-data dd li {
+	display: inline;
+	margin-right: 10px;
+}
+
+
+/*----------------------------------------------------------
+ tabContents
+------------------------------------------------------------*/
+
+
+/* paramData
+--------------------------------------------------*/
+
+.paramData {
+	margin: 0 5px 15px;
+	overflow: hidden;
+}
+
+.paramData dt,
+.paramData dd {
+	min-height: 18px;
+	margin-bottom: 2px;
+	padding-top: 4px;
+	padding-bottom: 1px;
+}
+
+.paramData dt {
+	clear: left;
+	float: left;
+	width: 90px;
+	margin-right: 10px;
+}
+
+.paramData dd {
+	background-position: 0 50%;
+	overflow: hidden;
+}
+.paramData dd[class^="iconParam"] { padding-left: 27px; }
+
+
+/* paramBreakingBall
+--------------------------------------------------*/
+
+.paramBreakingBall {
+	position: relative;
+	width: 210px;
+	height: 135px;
+	margin-right: 10px;
+	background: url(../../img/icon/icon_ball.png) no-repeat 50% 32px;
+	overflow: hidden;
+}
+
+.paramBreakingBall ul {
+	position: absolute;
+}
+
+.paramBreakingBall li {
+	font-size: 0.84em;
+	line-height: 1.2em;
+}
+
+
+/* ストレート系 ------------------------*/
+
+.breakingTop {
+	top: 0;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+.breakingTop li {
+	height: 30px;
+	background: url(../../img/icon/breaking_top.png) no-repeat center bottom;
+	text-align: center;
+}
+
+
+/* 第2変化球 */
+
+.breakingTop li:nth-last-of-type(1n+2) {
+	float: left;
+	width: 95px;
+	padding-right: 11px;
+	background-position: right bottom;
+	text-align: right;
+}
+
+.breakingTop li:first-child + li {
+	float: right;
+	width: 95px;
+	padding-left: 9px;
+	background-position: -2px bottom;
+	text-align: left;
+}
+
+
+/* スライダー系 ------------------------*/
+
+.breakingLeft {
+	top: 18px;
+	left: 0;
+}
+
+.breakingLeft li {
+	width: 90px;
+	height: 12px;
+	padding-bottom: 15px;
+	background-repeat: no-repeat;
+	background-position: right bottom;
+}
+
+.breakingLeft .level0 { background-image: url(../../img/icon/breaking_left0.png); }
+.breakingLeft .level1 { background-image: url(../../img/icon/breaking_left1.png); }
+.breakingLeft .level2 { background-image: url(../../img/icon/breaking_left2.png); }
+.breakingLeft .level3 { background-image: url(../../img/icon/breaking_left3.png); }
+.breakingLeft .level4 { background-image: url(../../img/icon/breaking_left4.png); }
+.breakingLeft .level5 { background-image: url(../../img/icon/breaking_left5.png); }
+.breakingLeft .level6 { background-image: url(../../img/icon/breaking_left6.png); }
+.breakingLeft .level7 { background-image: url(../../img/icon/breaking_left7.png); }
+
+
+/* 第2変化球 */
+
+.breakingLeft li:nth-last-of-type(1n+2) {
+	padding-bottom: 11px;
+}
+
+.breakingLeft li:first-child + li {
+	margin-top: -2px;
+	padding: 11px 0 0;
+	background-position: right top;
+}
+
+
+
+/* カーブ系 ----------------------------*/
+
+.breakingLeftBottom {
+	top: 52px;
+	left: 0;
+	width: 93px;
+}
+
+.breakingLeftBottom li {
+	width: 100%;
+	padding-top: 50px;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.breakingLeftBottom .level0 { background-image: url(../../img/icon/breaking_leftBottom0.png); }
+.breakingLeftBottom .level1 { background-image: url(../../img/icon/breaking_leftBottom1.png); }
+.breakingLeftBottom .level2 { background-image: url(../../img/icon/breaking_leftBottom2.png); }
+.breakingLeftBottom .level3 { background-image: url(../../img/icon/breaking_leftBottom3.png); }
+.breakingLeftBottom .level4 { background-image: url(../../img/icon/breaking_leftBottom4.png); }
+.breakingLeftBottom .level5 { background-image: url(../../img/icon/breaking_leftBottom5.png); }
+.breakingLeftBottom .level6 { background-image: url(../../img/icon/breaking_leftBottom6.png); }
+.breakingLeftBottom .level7 { background-image: url(../../img/icon/breaking_leftBottom7.png); }
+
+
+/* 第2変化球 */
+
+.breakingLeftBottom li:nth-last-of-type(1n+2),
+.breakingLeftBottom li:first-child + li {
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.breakingLeftBottom li:nth-last-of-type(1n+2) {
+	top: -5px;
+	left: -2px;
+	padding: 22px 50px 30px 7px;
+}
+
+.breakingLeftBottom li:first-child + li {
+	top: 1px;
+	left: 4px;
+}
+
+
+/* フォーク系 --------------------------*/
+
+.breakingBottom {
+	top: 55px;
+	left: 0;
+	width: 100%;
+	overflow: hidden;
+}
+
+.breakingBottom li {
+	padding-top: 63px;
+	background-repeat: no-repeat;
+	background-position: center top;
+	text-align: center;
+}
+
+.breakingBottom .level0 { background-image: url(../../img/icon/breaking_bottom0.png); }
+.breakingBottom .level1 { background-image: url(../../img/icon/breaking_bottom1.png); }
+.breakingBottom .level2 { background-image: url(../../img/icon/breaking_bottom2.png); }
+.breakingBottom .level3 { background-image: url(../../img/icon/breaking_bottom3.png); }
+.breakingBottom .level4 { background-image: url(../../img/icon/breaking_bottom4.png); }
+.breakingBottom .level5 { background-image: url(../../img/icon/breaking_bottom5.png); }
+.breakingBottom .level6 { background-image: url(../../img/icon/breaking_bottom6.png); }
+.breakingBottom .level7 { background-image: url(../../img/icon/breaking_bottom7.png); }
+
+
+/* 第2変化球 */
+
+.breakingBottom li:nth-last-of-type(1n+2) {
+	float: left;
+	width: 95px;
+	padding-right: 11px;
+	background-position: right top;
+	text-align: right;
+}
+
+.breakingBottom li:first-child + li {
+	float: right;
+	width: 95px;
+	padding-left: 9px;
+	background-position: -2px 0;
+	text-align: left;
+}
+
+
+/* シンカー系 --------------------------*/
+
+.breakingRightBottom {
+	top: 52px;
+	right: 0;
+	width: 93px;
+}
+
+.breakingRightBottom li {
+	width: 100%;
+	padding-top: 50px;
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-align: right;
+}
+
+.breakingRightBottom .level0 { background-image: url(../../img/icon/breaking_rightBottom0.png); }
+.breakingRightBottom .level1 { background-image: url(../../img/icon/breaking_rightBottom1.png); }
+.breakingRightBottom .level2 { background-image: url(../../img/icon/breaking_rightBottom2.png); }
+.breakingRightBottom .level3 { background-image: url(../../img/icon/breaking_rightBottom3.png); }
+.breakingRightBottom .level4 { background-image: url(../../img/icon/breaking_rightBottom4.png); }
+.breakingRightBottom .level5 { background-image: url(../../img/icon/breaking_rightBottom5.png); }
+.breakingRightBottom .level6 { background-image: url(../../img/icon/breaking_rightBottom6.png); }
+.breakingRightBottom .level7 { background-image: url(../../img/icon/breaking_rightBottom7.png); }
+
+
+/* 第2変化球 */
+
+.breakingRightBottom li:nth-last-of-type(1n+2),
+.breakingRightBottom li:first-child + li {
+	box-sizing: border-box;
+	position: absolute;
+}
+
+.breakingRightBottom li:nth-last-of-type(1n+2) {
+	top: -5px;
+	left: 2px;
+	padding: 22px 0 30px 50px;
+}
+
+.breakingRightBottom li:first-child + li {
+	top: 1px;
+	left: -4px;
+}
+
+
+/* シュート系 --------------------------*/
+
+.breakingRight {
+	top: 18px;
+	right: 0;
+}
+
+.breakingRight li {
+	width: 90px;
+	height: 12px;
+	padding-bottom: 15px;
+	background-repeat: no-repeat;
+	background-position: left bottom;
+	text-align: right;
+}
+
+.breakingRight .level0 { background-image: url(../../img/icon/breaking_right0.png); }
+.breakingRight .level1 { background-image: url(../../img/icon/breaking_right1.png); }
+.breakingRight .level2 { background-image: url(../../img/icon/breaking_right2.png); }
+.breakingRight .level3 { background-image: url(../../img/icon/breaking_right3.png); }
+.breakingRight .level4 { background-image: url(../../img/icon/breaking_right4.png); }
+.breakingRight .level5 { background-image: url(../../img/icon/breaking_right5.png); }
+.breakingRight .level6 { background-image: url(../../img/icon/breaking_right6.png); }
+.breakingRight .level7 { background-image: url(../../img/icon/breaking_right7.png); }
+
+
+/* 第2変化球 */
+
+.breakingRight li:nth-last-of-type(1n+2) {
+	padding-bottom: 11px;
+}
+
+.breakingRight li:first-child + li {
+	margin-top: -2px;
+	padding: 11px 0 0;
+	background-position: left top;
+}
+
+
+/* abilityData -------------------------*/
+
+.abilityData {
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+.abilityData li {
+	position: relative;
+	float: left;
+	width: 65px;
+	height: 15px;
+	margin: 0 5px 5px 0;
+	padding: 5px 25px 6px 4px;
+	border-radius: 5px;
+	font-size: 0.84em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.abilityData li span {
+	display: inline-block;
+	position: absolute;
+	top: 2px;
+	right: 2px;
+	width: 20px;
+	height: 18px;
+	padding: 2px 0;
+	vertical-align: middle;
+	background: #fff;
+	border-radius: 0 3px 3px 0;
+	font-size: 1.2em;
+	text-align: center;
+}
+
+.abilityData li.abilitySpecialPlus,
+.abilityData li.abilitySpecialMinus {
+	width: 86px;
+	padding-right: 4px;
+}
+
+
+/* abilityList -------------------------*/
+
+.abilityList { clear: both; }
+
+.abilityList li {
+	display: inline-block;
+	min-width: 60px;
+	margin-bottom: 5px;
+	padding: 5px 8px 6px;
+	border-radius: 5px;
+	font-size: 0.84em;
+	text-align: center;
+	font-weight: bold;
+}
+
+
+/* ability Color -----------------------*/
+
+.abilityNormal,
+.abilityDisabled {
+	background: #eef7ff;
+	color: #caddf7;
+}
+
+.abilityPlus {
+	background: #cde7ff;
+	color: #497ec6;
+}
+
+.abilityMinus,
+.abilitySpecialMinus {
+	background: #ffd8e3;
+	color: #ef6b6b;
+}
+
+.abilitySpecialPlus {
+	background: #fee749;
+	color: #c68149;
+}
+
+.abilityPlusMinus {
+	background: -webkit-gradient(
+					linear,
+					left top, right bottom,
+					from(#cde7ff),
+						color-stop(0.5, #cde7ff),
+						color-stop(0.5, #ffd8e3),
+					to(#ffd8e3)
+				);
+	color: #497ec6;
+}
+
+.abilityAppoint {
+	background: #deffef;
+	color: #7bae76;
+}
+
+
+/* resultData --------------------------*/
+
+.resultData dt,
+.resultData dd {
+	display: inline-block;
+	padding: 3px 10px;
+}
+
+.resultData dt {
+	background: -webkit-gradient(
+					linear,
+					left top, left bottom,
+					from(#fff),
+					to(#eee)
+				);
+	border: 1px solid #eee;
+	border-radius: 3px;
+	box-shadow: 0 1px 3px #ccc;
+	font-size: 0.84em;
+	color: #666;
+	font-weight: bold;
+	text-shadow: 0 1px 0 #fff;
+}
+
+.playerDiscription {
+	margin: 0 5px 10px;
+}
+
+
+/* 共通デザインここまで ***********************************************/
+
+@media screen and (max-width: 640px){ /* スマホ用デザイン *************/
+
+
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+#btnSearch,
+#thumbNav { display: none; }
+
+
+/*----------------------------------------------------------
+ contents
+------------------------------------------------------------*/
+
+#profileArea { position: relative; }
+
+#profileArea .btnBackList {
+	position: absolute;
+	top: 9px;
+	left: 18px;
+}
+
+#profileArea .btnBackList a {
+	display: inline-block;
+	padding: 4px 10px 4px 5px;
+	background: #ffa61a;
+	border-radius: 3px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+}
+#profileArea .btnBackList a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 4px;
+	left: -8px;
+	width: 18px;
+	height: 18px;
+	z-index: -1;
+	background: #ffa61a;
+	border-radius: 1px 0 1px 3px;
+	-webkit-transform: rotate(45deg);
+}
+
+#profileArea .teamName {
+	padding: 25px 10px 5px;
+	font-size: 10px;
+	color: #888;
+	text-align: right;
+	font-weight: bold;
+}
+
+.profile-data { margin-bottom: 30px; }
+.profile-data dt { padding-left: 10px; }
+.profile-data dd { font-weight: bold; }
+.profile-data dd:last-child { border-bottom: none; }
+
+
+/*----------------------------------------------------------
+ galleryArea
+------------------------------------------------------------*/
+
+.galleryArea {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+.gallery-imageList,
+.gallery-thumbList { display: none; }
+
+
+/*----------------------------------------------------------
+ tabContents
+------------------------------------------------------------*/
+
+.tabNav {
+	border-top: 1px solid #ccc;
+	overflow: hidden;
+}
+
+.tabNav li {
+	box-sizing: border-box;
+	float: left;
+	width: 33%;
+	border-right: 1px solid #fff;
+	border-bottom: 2px solid #ccc;
+}
+.tabNav li:last-child {
+	width: 34%;
+	border-right: none;
+}
+
+.tabNav li a {
+	display: block;
+	padding: 10px 5px;
+	background: #ccc;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+.tabNav li.active { border-color: #fff; }
+.tabNav li.active a {
+	background: #fff;
+	color: #777;
+}
+
+
+.tabContents { padding: 15px 10px; }
+
+.tabContents#pitcher { background: url(../../img/bg/bg_pitcher.jpg) no-repeat 100% 30px; }
+.tabContents#fielder { background: url(../../img/bg/bg_fielder.jpg) no-repeat 100% 60px; }
+.tabContents#other { background: url(../../img/bg/bg_other.jpg) no-repeat 100% 25px; }
+
+.tabContents h2 {
+	margin-bottom: 15px;
+	padding: 5px 10px;
+	background: #47d;
+	border-radius: 3px;
+	color: #fff;
+}
+
+
+/* paramData
+--------------------------------------------------*/
+
+.paramData {
+	padding: 0 5px 10px;
+	border-bottom: 1px dotted #ccc;
+}
+
+.paramData dt {
+	color: #666;
+	font-weight: bold;
+}
+
+
+/* paramBreakingBall
+--------------------------------------------------*/
+
+.paramBreakingBall { margin: 0 auto 20px; }
+
+
+/* resultData --------------------------*/
+
+.resultData {
+	margin-left: 5px;
+	padding-bottom: 15px;
+}
+
+.resultData dt,
+.resultData dd { margin-bottom: 15px; }
+
+.resultData dt {
+	min-width: 35px;
+	margin-right: 5px;
+	text-align: center;
+}
+
+.resultData dd { min-width: 50px; }
+
+
+/*----------------------------------------------------------
+ footer
+------------------------------------------------------------*/
+
+#globalFooter { border-top: none; }
+
+
+
+/*----------------------------------------------------------
+ thickbox
+------------------------------------------------------------*/
+
+#thickbox { display: block; }
+
+#contentsNav,
+.thickboxHeader,
+.searchForm { display: none; }
+
+
+/* searchList
+--------------------------------------------------*/
+
+#searchList { border-top: 3px solid #bbb; }
+
+#searchList dt {
+	position: relative;
+	padding: 15px;
+	border-bottom: 1px solid #bbb;
+	font-weight: bold;
+}
+
+#searchList dt:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 7px;
+	height: 7px;
+	margin-top: -6px;
+	border-top: 3px solid #ccc;
+	border-right: 3px solid #ccc;
+	-webkit-transform: rotate(135deg);
+}
+#searchList dt.acdOpened:after {
+	margin-top: -4px;
+	-webkit-transform: rotate(-45deg);
+}
+
+.nameList li {
+	position: relative;
+	padding: 12px 25px;
+	border-bottom: 1px solid #ddd;
+	color: #666;
+	font-weight: bold;
+	text-decoration: none;
+}
+.nameList li:last-child { border-bottom: 3px solid #bbb; }
+
+.nameList li:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	width: 5px;
+	height: 5px;
+	margin-top: -3px;
+	border-top: 2px solid #ccc;
+	border-right: 2px solid #ccc;
+	-webkit-transform: rotate(45deg);
+}
+
+#searchList dd:last-child .nameList li:last-child { border-bottom: none; }
+
+.nameList span { display: none; }
+
+
+
+} /* スマホ用デザインここまで *****************************************/
+
+@media screen and (min-width: 641px){ /* PC用デザイン *****************/
+
+
+
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+#btnSearch {
+	position: absolute;
+	top: -5px;
+	right: 0;
+	padding: 3px 10px;
+	background: #aaa;
+	border-radius: 3px;
+	font-size: 0.84em;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+#btnSearch:hover { opacity: 0.7; }
+
+
+/*----------------------------------------------------------
+ contents
+------------------------------------------------------------*/
+
+#profileArea .btnBackList { display: none; }
+
+#profileArea .teamName {
+	margin: 0 0 10px 5px;
+	color: #888;
+	font-weight: bold;
+}
+
+.profile-data {
+	float: left;
+	width: 280px;
+	margin-right: 20px;
+}
+
+
+/*----------------------------------------------------------
+ galleryArea
+------------------------------------------------------------*/
+
+.galleryArea {
+	position: relative;
+	margin-bottom: 10px;
+}
+
+.galleryArea figure { display: none; }
+
+.gallery-imageList {
+	position: relative;
+	height: 210px;
+	margin-bottom: 10px;
+}
+
+.gallery-imageList li {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.gallery-thumbList{
+	position: absolute;
+	right: 10px;
+	bottom: 5px;
+	z-index: 10;
+}
+.gallery-thumbList li {
+	display: inline;
+	margin-left: 10px;
+}
+.gallery-thumbList li:first-child { margin-left: 0; }
+
+.gallery-thumbList li a {
+	color: #fff;
+	text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	text-decoration: none;
+}
+
+.gallery-thumbList li.active a {
+	color: #ff8c00;
+	cursor: default;
+}
+.gallery-thumbList li a:hover { color: #ff8c00; }
+
+
+/*----------------------------------------------------------
+ tabContents
+------------------------------------------------------------*/
+
+.tabNav { overflow: hidden; }
+
+.tabNav li {
+	float: left;
+	margin-right: 10px;
+}
+
+.tabNav a {
+	display: inline-block;
+	padding: 5px 20px;
+	background: #ccc;
+	border-top: 3px solid #ccc;
+	border-left: 3px solid #ccc;
+	border-right: 3px solid #ccc;
+	border-radius: 0 5px 0 0;
+	color: #555;
+	font-weight: bold;
+	text-decoration: none;
+}
+.tabNav a:hover { color: #fff; }
+
+.tabNav li.active a {
+	background: #fff;
+	cursor: default;
+}
+.tabNav li.active:hover a { color: #555; }
+
+.tabContents {
+	min-height: 446px;
+	margin-top: -3px;
+	padding: 15px;
+	border: 3px solid #ccc;
+	border-radius: 0 8px 8px 8px;
+	overflow: hidden;
+}
+
+.tabContents#pitcher { background: url(../../img/bg/bg_pitcher.jpg) no-repeat 125px 60px; }
+.tabContents#fielder { background: url(../../img/bg/bg_fielder.jpg) no-repeat 220px 60px; }
+.tabContents#other { background: url(../../img/bg/bg_other.jpg) no-repeat 220px 30px; }
+
+.tabContents h2 {
+	clear: both;
+	margin-bottom: 10px;
+	padding: 0 5px 5px;
+	border-bottom: 2px dotted #ddd;
+	font-size: 1.17em;
+}
+
+.paramBase {
+	min-height: 190px;
+	overflow: hidden;
+}
+
+#pitcher .paramBase {
+	box-sizing: border-box;
+	padding-top: 20px;
+}
+
+
+/* paramData
+--------------------------------------------------*/
+
+.paramData {
+	float: left;
+	margin: 0 5px 15px;
+}
+
+#pitcher .paramData dt { width: 80px; }
+
+
+/* paramBreakingBall
+--------------------------------------------------*/
+
+.paramBreakingBall { float: right; }
+
+
+/* resultData --------------------------*/
+
+.resultData { margin-bottom: 40px; }
+
+.resultData dt,
+.resultData dd { margin-bottom: 10px; }
+
+
+/*----------------------------------------------------------
+ thumbNav
+------------------------------------------------------------*/
+
+#thumbNav {
+	height: 110px;
+	padding: 15px 0;
+	background: -webkit-gradient(
+					linear,
+					left top, left bottom,
+					from(#dcdcdc),
+						color-stop(0.05, #fff),
+						color-stop(0.9, #fff),
+					to(#e0e0e0)
+				);
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #ddd;
+}
+
+.thumbNav-title {
+	float: left;
+	width: 185px;
+	height: 18px;
+	margin-right: 20px;
+	padding: 45px 10px;
+	background: #bbb;
+	border-radius: 5px;
+	color: #fff;
+	text-align: right;
+	font-weight: bold;
+}
+
+.slider {
+	position: relative;
+	padding: 0 35px;
+	overflow: hidden;
+}
+
+.thumbNav-list { overflow: hidden; }
+
+.slider ul {
+	position: relative;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+
+.slider li {
+	position: relative;
+	float: left;
+	margin-right: 15px;
+	padding: 5px 0 3px;
+}
+.slider li:last-child { margin-right: 0; }
+.slider li:not([class="current"]) { cursor: pointer; }
+
+.slider li[data-playerCat="pitcher"]	{ border-bottom: 3px solid #c33; }
+.slider li[data-playerCat="catcher"]	{ border-bottom: 3px solid #039; }
+.slider li[data-playerCat="infielder"]	{ border-bottom: 3px solid #fd0; }
+.slider li[data-playerCat="outfielder"]	{ border-bottom: 3px solid #093; }
+
+.slider li.current:after {
+	content: "▼";
+	display: block;
+	position: absolute;
+	left: 50%;
+	bottom: -15px;
+	margin-left: -5px;
+	-webkit-transform: scale(1.2, 0.8);
+	font-size: 14px;
+}
+
+.slider li[data-playerCat="pitcher"].current:after		{ color: #c33; }
+.slider li[data-playerCat="catcher"].current:after		{ color: #039; }
+.slider li[data-playerCat="infielder"].current:after	{ color: #fd0; }
+.slider li[data-playerCat="outfielder"].current:after	{ color: #093; }
+
+.slider figure {
+	display: block;
+	width: 80px;
+	text-align: center;
+}
+
+.slider figure figcaption {
+	margin-bottom: 2px;
+	line-height: 1em;
+	font-weight: bold;
+	white-space: nowrap;
+}
+
+.slider .btnBack,
+.slider .btnNext {
+	position: absolute;
+	top: 0;
+	width: 35px;
+	height: 100%;
+	background: #fff;
+	text-align: center;
+	cursor: pointer;
+}
+.slider .btnBack { left: 0; }
+.slider .btnNext { right: 0; }
+
+.slider .btnBack img,
+.slider .btnNext img { margin-top: 50px; }
+
+.slider .btnBack:hover img,
+.slider .btnNext:hover img { opacity: 0.7; }
+
+
+/*----------------------------------------------------------
+ thickbox
+------------------------------------------------------------*/
+
+.searchForm { padding: 0 20px 20px; }
+.searchForm input {
+	width: 500px;
+	padding: 5px;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+
+/* searchList
+--------------------------------------------------*/
+
+#searchList {
+	padding: 20px 20px 0;
+	border-top: 1px dotted #ccc;
+}
+
+#searchList dt,
+#searchList dd {
+	margin-bottom: 10px;
+}
+
+#searchList dt {
+	clear: left;
+	float: left;
+	width: 60px;
+	padding-right: 15px;
+	color: #555;
+	line-height: 1.5em;
+	text-align: right;
+	font-weight: bold;
+}
+#searchList dd {
+	min-height: 25px;
+	padding-left: 15px;
+	border-left: 2px dotted #ccc;
+	overflow: hidden;
+}
+
+.nameList li {
+	display: inline-block;
+	min-width: 60px;
+	margin: 0 10px 5px 0;
+	padding: 1px 5px 2px;
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 3px;
+	box-shadow: 0 1px 2px #ccc;
+	font-size: 10px;
+	color: #fff;
+	line-height: 1.2em;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+	cursor: pointer;
+}
+
+.nameList li[data-playerCat="pitcher"] {
+	background: -webkit-gradient(
+					linear,
+					left top, left bottom,
+					from(#e66),
+						color-stop(0.5, #c33),
+					to(#c33)
+	);
+	border-color: #c33;
+}
+.nameList li[data-playerCat="catcher"] {
+	background: -webkit-gradient(
+					linear,
+					left top, left bottom,
+					from(#36c),
+						color-stop(0.5, #039),
+					to(#039)
+	);
+	border-color: #039;
+}
+.nameList li[data-playerCat="infielder"] {
+	background: -webkit-gradient(
+					linear,
+					left top, left bottom,
+					from(#eeb700),
+						color-stop(0.5, #c6ab00),
+					to(#c6ab00)
+	);
+	border-color: #c6ab00;
+}
+.nameList li[data-playerCat="outfielder"] {
+	background: -webkit-gradient(
+					linear,
+					left top, left bottom,
+					from(#3c6),
+						color-stop(0.5, #093),
+					to(#093)
+	);
+	border-color: #093;
+}
+
+.nameList li:hover { opacity: 0.7; }
+.nameList li span { display: none; }
+
+
+} /* PC用デザインここまで *********************************************/

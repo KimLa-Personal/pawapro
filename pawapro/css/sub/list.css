@@ -1,0 +1,689 @@
+@charset "UTF-8";
+/* ===================================================================
+
+ player.css
+
+======================================================================*/
+
+
+/* 共通デザイン *******************************************************/
+
+
+/*----------------------------------------------------------
+ playerList
+------------------------------------------------------------*/
+
+
+/* playerList-data
+--------------------------------------------------*/
+
+.paramData li { background-position: 100% 0; }
+.paramData li[class^="iconParam"] { padding-right: 21px; }
+
+
+
+/* 共通デザインここまで ***********************************************/
+
+@media screen and (max-width: 640px){ /* スマホ用デザイン *************/
+
+
+#playerList > h1 { display: none; }
+
+/*----------------------------------------------------------
+ searchInfo
+------------------------------------------------------------*/
+
+.searchInfo { margin-top: 15px; }
+
+
+/* listInfo
+--------------------------------------------------*/
+
+.sortBtn {
+	display: -webkit-box;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+}
+
+.sortBtn li {
+	width: 17%;
+	padding: 15px 5px 10px;
+	border-bottom: 3px solid #fff;
+	font-size: 10px;
+	color: #777;
+	line-height: 1.2em;
+	text-align: center;
+}
+.sortBtn li:nth-of-type(2) { width: 15%; }
+
+.sortBtn li.active {
+	border-color: #ffa61a;
+	color: #fa9c09;
+	font-weight: bold;
+	cursor: default;
+}
+
+.listNumber { padding: 10px; }
+
+
+/* searchRefine
+--------------------------------------------------*/
+
+.searchRefine {
+	position: relative;
+	margin: 0 10px;
+	padding: 10px 0;
+	border: 2px solid #eee;
+	border-radius: 5px;
+}
+
+#btnRefine {
+	position: absolute;
+	top: 10px;
+	right: 7px;
+	padding: 3px 10px;
+	background: #ffa61a;
+	border-radius: 3px;
+	font-size: 0.84em;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+#btnRefine:hover { opacity: 0.7; }
+
+
+/* refineInfo
+----------------------------------------*/
+
+.refineInfo {
+	padding: 0 7px;
+	overflow: hidden;
+}
+
+.refineInfo > dt {
+	margin-bottom: 10px;
+	padding: 3px 90px 10px 5px;
+	border-bottom: 1px dotted #eee;
+	color: #666;
+	font-weight: bold;
+}
+
+.refineInfo > dd { overflow: hidden; }
+
+.refineNowList {
+	padding: 0 5px;
+	color: #666;
+}
+
+.refineNowList dt {
+	float: left;
+	font-weight: bold;
+}
+.refineNowList dt:after {
+	content: "：";
+	margin-right: 5px;
+}
+
+.refineNowList dd { overflow: hidden; }
+
+.refineNowList li { display: inline-block; }
+.refineNowList li:nth-last-of-type(1n+2):after {
+	content: "/";
+	margin: 0 5px;
+}
+
+
+/* categoryList
+----------------------------------------*/
+
+.refinePanel { padding-top: 10px; }
+
+.categoryList dt {
+	padding: 8px 10px;
+	background: #eee;
+	font-weight: bold;
+}
+
+.categoryList ul { border-top: 1px solid #eee; }
+.categoryList li { border-bottom: 1px solid #eee; }
+
+.categoryList li label {
+	display: block;
+	padding: 10px;
+}
+
+.categoryList li label input { margin-right: 7px; }
+
+.areaBtn {
+	padding: 20px 0 10px;
+	text-align: center;
+}
+
+.btnListRefine {
+	display: block;
+	width: 260px;
+	margin: 0 auto;
+	padding: 10px 0;
+	background: #c4c4c4;
+	border-radius: 5px;
+	box-shadow: 0 1px 3px #ccc;
+	font-size: 16px;
+	color: #fff;
+	font-weight: bold;
+}
+
+
+/*----------------------------------------------------------
+ playerList
+------------------------------------------------------------*/
+
+.playerList {
+	border-top: 1px solid #ccc;
+}
+
+.playerList > li {
+	position: relative;
+	padding: 10px 25px 15px 10px;
+	border-bottom: 1px solid #ccc;
+	overflow: hidden;
+}
+
+.playerList > li:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	margin-top: -7px;
+	border-top: 3px solid #ccc;
+	border-right: 3px solid #ccc;
+	-webkit-transform: rotate(45deg);
+}
+
+.playerList > li h2 {
+	margin-bottom: 5px;
+	font-size: 14px;
+	color: #039;
+}
+
+.playerList > li h2 span {
+	margin-left: 10px;
+	font-size: 10px;
+	font-weight: normal;
+}
+
+
+/* playerList-data
+--------------------------------------------------*/
+
+.playerList-data {
+	overflow: hidden;
+}
+
+.profData li {
+	display: inline-block;
+	margin-right: 2px;
+}
+
+.profData li:first-child {
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.profData li:first-child:after {
+	content: "/";
+	margin-left: 7px;
+	font-weight: normal;
+}
+
+.profData li:nth-of-type(2),
+.profData li:nth-of-type(1n+4) { display: none; }
+
+.profData li span {
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.paramData { overflow: hidden; }
+
+.paramData li {
+	float: left;
+	margin: 5px 15px 5px 0;
+	font-size: 10px;
+}
+
+[data-playercat="pitcher"] .paramData li:nth-child(2),
+.paramData li:nth-child(4) { clear: left; }
+
+[data-playercat="catcher"] .paramData li,
+[data-playercat="infielder"] .paramData li,
+[data-playercat="outfielder"] .paramData li {
+	width: 1em;
+	height: 1.5em;
+	overflow: hidden;
+}
+
+[data-playercat="pitcher"] .paramData li:first-child { margin-bottom: 0; }
+.paramData li:first-child span { font-size: 14px; }
+
+
+/* playerList-thumb
+--------------------------------------------------*/
+
+.playerList-thumb {
+	float: left;
+	margin-right: 10px;
+}
+
+.noSearchResult {
+	padding: 50px 0;
+	text-align: center;
+}
+
+
+/*----------------------------------------------------------
+ pager
+------------------------------------------------------------*/
+
+.pager {
+	padding: 20px 0;
+	text-align: center;
+}
+
+.pager p,
+.pager ol { display: inline-block; }
+
+.pager p { margin: 0 5px; }
+.pager ol { margin: 0 5px; }
+
+.pager li {
+	display: inline-block;
+	width: 30px;
+	margin: 0 3px;
+	padding: 7px 3px;
+	border: 1px solid #cecece;
+	border-radius: 3px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+.pager li:not([class]) { cursor: pointer; }
+.pager li:not([class]):hover { background: #ffefd5; }
+
+.pager li.current {
+	background: #ffa61a;
+	border-color: #ffa61a;
+	color: #fff;
+	cursor: default;
+}
+
+.pager p:not([class="disabled"]) {
+	font-size: 16px;
+	color: #ccc;
+}
+
+.pager p.disabled { color: #eee; }
+
+.pager p.btnBeforeStart,
+.pager p.btnAfterLast { display: none; }
+
+
+
+} /* スマホ用デザインここまで *****************************************/
+
+@media screen and (min-width: 641px){ /* PC用デザイン *****************/
+
+
+
+/*----------------------------------------------------------
+ contents
+------------------------------------------------------------*/
+
+#contents h1 {
+	background: #444;
+	color: #fff;
+}
+
+
+/*----------------------------------------------------------
+ searchInfo
+------------------------------------------------------------*/
+
+
+
+/* listInfo
+--------------------------------------------------*/
+
+.listInfo {
+	margin-bottom: 20px;
+	border-bottom: 1px solid #ddd;
+	overflow: hidden;
+}
+
+.sortBtn { float: left; }
+
+.sortBtn li {
+	display: inline-block;
+	padding: 15px 10px 10px;
+	color: #777;
+	cursor: pointer;
+}
+.sortBtn li:not([class="active"]):hover { opacity: 0.7; }
+
+.sortBtn li.active {
+	border-bottom: 3px solid #ffa61a;
+	color: #fa9c09;
+	font-weight: bold;
+	cursor: default;
+}
+
+.listNumber {
+	float: right;
+	padding: 15px 0 10px;
+	text-align: right;
+}
+
+
+/* searchRefine
+--------------------------------------------------*/
+
+.searchRefine {
+	position: relative;
+	margin-bottom: 15px;
+	padding: 10px 15px;
+	border: 2px solid #eee;
+	border-radius: 5px;
+}
+
+#btnRefine {
+	position: absolute;
+	top: 10px;
+	right: 7px;
+	padding: 3px 10px;
+	background: #ffa61a;
+	border-radius: 3px;
+	font-size: 0.84em;
+	color: #fff;
+	font-weight: bold;
+	cursor: pointer;
+}
+#btnRefine:hover { opacity: 0.7; }
+
+
+/* refineInfo
+----------------------------------------*/
+
+.refineInfo {
+	padding-right: 90px;
+	overflow: hidden;
+}
+
+.refineInfo > dt {
+	float: left;
+	color: #666;
+	font-weight: bold;
+}
+
+.refineInfo > dd { overflow: hidden; }
+
+.refineNowList {
+	float: left;
+	margin-left: 15px;
+}
+
+.refineNowList dt,
+.refineNowList dd,
+.refineNowList ul,
+.refineNowList li { display: inline-block; }
+
+.refineNowList dt:after { content: "："; }
+.refineNowList li:nth-last-of-type(1n+2):after {
+	content: "/";
+	margin: 0 5px;
+}
+
+
+/* categoryList
+----------------------------------------*/
+
+.refinePanel {
+	margin-top: 10px;
+	padding-top: 20px;
+	border-top: 1px dotted #ddd;
+}
+
+.categoryList {
+
+}
+
+.categoryList dt,
+.categoryList dd { margin-bottom: 10px; }
+
+.categoryList dt {
+	clear: left;
+	float: left;
+	width: 80px;
+	font-weight: bold;
+}
+
+.categoryList dd { overflow: hidden; }
+
+.categoryList ul { overflow: hidden; }
+
+.categoryList li { margin: 0 15px 5px 0; }
+.categoryList li:nth-of-type(1n+2) { float: left; }
+
+.categoryList input { margin-right: 4px; }
+
+.areaBtn { text-align: center; }
+.refinePanel .areaBtn:nth-last-of-type(1n+2) { display: none; }
+
+.btnListRefine {
+	padding: 5px 30px;
+	background: #aaa;
+	border-radius: 3px;
+	box-shadow: 0 1px 1px #eee;
+	font-size: 1.34em;
+	color: #fff;
+	text-shadow: 0 -1px 0 #777;
+	font-weight: bold;
+	cursor: pointer;
+}
+.btnListRefine:hover { opacity: 0.7; }
+
+
+/*----------------------------------------------------------
+ playerList
+------------------------------------------------------------*/
+
+.playerList { margin: 0 5px 30px; }
+
+.playerList > li {
+	position: relative;
+	padding: 15px 35px 10px 15px;
+	border-bottom: 1px solid #eee;
+	overflow: hidden;
+	cursor: pointer;
+}
+.playerList > li:hover {
+	border-radius: 3px;
+	box-shadow: 0 0 3px #aebfda;
+}
+.playerList > li:hover:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 15px;
+	width: 10px;
+	height: 10px;
+	margin-top: -5px;
+	border-top: 3px solid #ccc;
+	border-right: 3px solid #ccc;
+	-webkit-transform: rotate(45deg);
+}
+
+.playerList h2 {
+	margin-bottom: 10px;
+	font-size: 1.34em;
+	color: #039;
+}
+
+.playerList > li:hover h2 { color: #fa9c09; }
+
+.playerList h2 span {
+	padding-left: 10px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+
+/* playerList-data
+--------------------------------------------------*/
+
+.playerList-data {
+	padding-top: 4px;
+	overflow: hidden;
+}
+
+.profData { margin-bottom: 7px; }
+
+.profData li {
+	display: inline-block;
+	margin-left: 7px;
+	color: #666;
+}
+.profData li:first-child {
+	font-size: 1.17em;
+	font-weight: bold;
+}
+.profData li:first-child span {
+	margin-left: 5px;
+	font-size: 12px;
+	font-weight: normal;
+}
+
+.profData li:after {
+	content: "/";
+	margin-left: 7px;
+	color: #bbb;
+	font-weight: normal;
+}
+.profData li:last-child:after {
+	content: "";
+	margin-left: 0;
+}
+
+.iconPosition {
+	display: inline-block;
+	margin-right: 15px;
+	width: 50px;
+	padding: 3px 0;
+	border-radius: 3px;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+}
+
+.paramData {
+	margin-bottom: 15px;
+	padding: 10px;
+	background: #fff;
+	border: 1px solid #eee;
+	border-radius: 3px;
+}
+
+.paramData li {
+	display: inline-block;
+	margin-right: 15px;
+	color: #555;
+}
+
+.paramData li span { font-weight: bold; }
+
+
+/* playerList-thumb
+--------------------------------------------------*/
+
+.playerList-thumb {
+	float: left;
+	width: 80px;
+	margin-right: 15px;
+}
+
+.noSearchResult {
+	padding: 150px 0;
+	font-size: 14px;
+	text-align: center;
+}
+
+
+/*----------------------------------------------------------
+ pager
+------------------------------------------------------------*/
+
+.pager { text-align: center; }
+
+.pager p,
+.pager ol { display: inline-block; }
+
+.pager p { margin: 0 5px; }
+.pager ol { margin: 0 15px; }
+
+.pager li {
+	display: inline-block;
+	width: 30px;
+	margin: 0 3px;
+	padding: 7px 3px;
+	border: 1px solid #cecece;
+	border-radius: 3px;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+}
+.pager li:not([class]) { cursor: pointer; }
+.pager li:not([class]):hover { background: #ffefd5; }
+
+.pager li.current {
+	background: #ffa61a;
+	border-color: #ffa61a;
+	color: #fff;
+	cursor: default;
+}
+
+.pager p:not([class="disabled"]) {
+	color: #039;
+	text-decoration: underline;
+	cursor: pointer;
+}
+.pager p:not([class="disabled"]):hover {
+	color: #aebfda;
+	text-decoration: none;
+}
+
+.pager p.disabled {
+	color: #ddd;
+	text-decoration: none;
+	cursor: default;
+}
+
+
+/*----------------------------------------------------------
+ thickbox
+------------------------------------------------------------*/
+
+.thickboxBody { padding: 50px 30px; }
+
+.errerMsg {
+	font-size: 1.17em;
+	color: #c33;
+	text-align: center;
+	font-weight: bold;
+}
+
+.errerMsg:nth-last-of-type(1n+2) { margin-bottom: 15px; }
+
+
+} /* PC用デザインここまで *********************************************/

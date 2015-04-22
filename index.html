@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<title>テスト</title>
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<link rel="stylesheet" type="text/css" href="./pawapro/css/common.css">
+<link rel="stylesheet" type="text/css" href="./pawapro/css/design.css">
+<link rel="stylesheet" type="text/css" href="./pawapro/css/sub/top.css">
+<style>
+.fileList {
+	width: 500px;
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+.fileList dt {
+	padding: 7px 15px;
+	font-size: 1.17em;
+	color: #777;
+	font-weight: bold;
+}
+.fileList dd a {
+	display: block;
+	position: relative;
+	padding: 15px 15px;
+	border-top: 1px solid #ddd;
+	font-weight: bold;
+}
+.fileList dd a:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	width: 10px;
+	height: 10px;
+	margin-top: -7px;
+	border-top: 3px solid #ccc;
+	border-right: 3px solid #ccc;
+	-webkit-transform: rotate(45deg);
+}
+</style>
+</head>
+<body>
+
+
+<div id="page">
+
+	<header id="globalHeader">
+		<div class="inner">
+			<div id="logo">
+				<a href="/sample/kimura/"><img src="./pawapro/img/logo.png" width="250" height="52" alt="パワプロ選手データベース" /></a>
+			</div>
+			<nav id="globalNav">
+				<ul>
+					<li><a href="./player/">選手</a></li>
+					<li><a href="./team/">チーム</a></li>
+					<li><a href="./data/">データ</a></li>
+					<li class="current"><a href="./">トップ</a></li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<div class="inner">
+
+			<dl class="fileList">
+				<dt>関連ファイル一覧</dt>
+				<dd><a href="./documents/api.xlsx">API仕様書</a></dd>
+			</dl>
+
+		</div><!--/.inner -->
+	</main>
+
+	<footer id="globalFooter">
+		<p class="btnPagetop"><a href="#page">PAGETOP</a></p>
+		<p class="copyright"><small>&copy; All Rights Reserved.</small></p>
+	</footer>
+
+</div><!--/ #page -->
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js" /></script>
+<script src="./pawapro/js/common.js" /></script>
+<script src="./pawapro/js/sub/top.js" /></script>
+</body>
+</html>
