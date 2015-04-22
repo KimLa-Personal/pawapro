@@ -1,5 +1,6 @@
 # pawapro
 パワプロデータベース
+[http://fe.lc-design.jp/sample/kimura/](http://fe.lc-design.jp/sample/kimura/)
 
 ## 機能
 * 各選手データをAPIとして読み込んで表示
