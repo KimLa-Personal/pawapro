@@ -16,15 +16,15 @@
  	var pageInit = function() {
 
  		/* トップ */
- 		var topView = new TopView();
- 		topView.init('#TopView');
+ 		var profileView = new ProfileView();
+ 		profileView.init('#ProfileView');
 
  	};
 
  	/**
  	 * トップ
  	 */
- 	var TopView = (function() {
+ 	var ProfileView = (function() {
  		var constructor = function() {
  			return this;
  		};

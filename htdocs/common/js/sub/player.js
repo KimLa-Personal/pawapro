@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------------
- sub/list.js
+ sub/player.js
 ----------------------------------------------------------------------*/
 (function() {
 
@@ -16,15 +16,15 @@
 	var pageInit = function() {
 
 		/* トップ */
-		var topView = new TopView();
-		topView.init('#TopView');
+		var playerListView = new PlayerListView();
+		playerListView.init('#PlayerListView');
 
 	};
 
 	/**
 	 * トップ
 	 */
-	var TopView = (function() {
+	var PlayerListView = (function() {
 		var constructor = function() {
 			return this;
 		};
