@@ -1,9 +1,9 @@
 @charset "UTF-8";
 /* ===================================================================
 
- base.css
+ common.css
 
-===================================================================== */
+======================================================================*/
 
 
 /*----------------------------------------------------------
@@ -12,12 +12,11 @@
 
 body, div, section, article, aside, nav,
 h1, h2, h3, h4, h5, h6,
-span, time, figure, figcaption, 
+span, time, figure, figcaption,
 p, blockquote, pre, address, code,
 dl, dt, dd, ol, ul, li,
 fieldset, form, legend, button,
-table, tbody, thead, tfoot, tr, th, td,
-input, select, textarea, button {
+table, tbody, thead, tfoot, tr, th, td {
 	margin: 0;
 	padding: 0;
 	line-height: 1.5em;
@@ -52,7 +51,7 @@ html { overflow-y: scroll; }
 
 body, input, select, textarea {
 	font-size: 75%;
-	color: #444;
+	color: #333;
 	font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
 }
 
@@ -79,7 +78,7 @@ a:visited{
 
 a:active,
 a:hover {
-	color: #aebfda;
+	color: #C33;
 	text-decoration: none;
 }
 
@@ -268,5 +267,3 @@ a:hover {
 
 .bold	{ font-weight: bold !important; }
 .normal	{ font-weight: normal !important; }
-
-
