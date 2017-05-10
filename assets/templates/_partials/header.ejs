@@ -1,0 +1,37 @@
+<% if(typeof current === 'undefined') { current = ''; } %>
+<header class="header">
+  <div class="inner">
+    <div class="header-heading">
+      <% if(current !== '') { %>
+        <h1 class="header-heading-logo"><a href="/"><img src="/common/img/logo_site.png" alt="パワプロ選手データベース"></a></h1>
+        <div class="header-heading-btnContentsNav js-triggerOpenSidebar"><span>コンテンツメニュー</span></div>
+      <% } else { %>
+        <h1 class="header-heading-logo"><span><img src="/common/img/logo_site.png" alt="パワプロ選手データベース"></span></h1>
+      <% } %>
+    </div>
+    <nav class="globalNav">
+      <ul class="globalNav-list">
+        <% if(current === 'team') { %>
+          <li class="current"><span>チーム</span></li>
+        <% } else { %>
+          <li><a href="/team/index.html">チーム</a></li>
+        <% } %>
+        <% if(current === 'player') { %>
+          <li class="current"><span>選手</span></li>
+        <% } else { %>
+          <li><a href="/player/index.html">選手</a></li>
+        <% } %>
+        <% if(current === 'data') { %>
+          <li class="current"><span>データ</span></li>
+        <% } else { %>
+          <li><a href="/data/index.html">データ</a></li>
+        <% } %>
+        <% if(current === 'documents') { %>
+          <li class="current"><span>資料</span></li>
+        <% } else { %>
+          <li><a href="/documents/index.html">資料</a></li>
+        <% } %>
+      </ul>
+    </nav>
+  </div><!--/.inner -->
+</header>

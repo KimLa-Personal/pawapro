@@ -1,0 +1,182 @@
+// PC Layout
+/*----------------------------------------------------------
+ page
+------------------------------------------------------------*/
+
+.page
+  min-width: auto
+  padding-top: 0
+
+.inner
+  max-width: 1200px
+  min-width: 960px
+  padding: 0 15px
+  margin-left: auto
+  margin-right: auto
+
+
+/*----------------------------------------------------------
+ header
+------------------------------------------------------------*/
+
+.header
+  min-height: 80px
+  border-bottom: 3px solid #333
+  overflow: hidden
+
+.header-heading
+  position: static
+  float: left
+  width: auto
+  padding: 10px 0
+  background: none
+
+.header-heading-logo
+  width: auto
+  padding-top: 5px
+
+
+/* btnContentsNav
+--------------------------------------------------*/
+
+.header-heading-btnContentsNav
+  display: none
+
+
+/*----------------------------------------------------------
+ globalNav
+------------------------------------------------------------*/
+
+.globalNav
+  float: right
+  width: 400px
+  margin-top: 34px
+  border-radius: 5px
+
+.globalNav-list
+  li
+    &:first-child
+      border-radius: 5px 0 0 5px
+    &:last-child
+      border-radius: 0 5px 5px 0
+    a
+      padding: 11px 0 9px
+      &:hover
+        text-shadow: 0 0 5px #fff
+
+
+/*----------------------------------------------------------
+ main
+------------------------------------------------------------*/
+
+.main
+  overflow: hidden
+
+.main-header
+  margin-bottom: 30px
+  background: #f3f6ff
+
+.main-header-topicPath
+  display: block
+  margin-bottom: 40px
+
+.main-header-supplementary
+  padding: 0
+  background: none
+  text-align: center
+  font-size: 14px
+  color: #666
+
+.main-header-title
+  padding: 0 0 40px
+  font-size: 22px
+
+.main-contents
+  display: flex
+  flex-direction: row-reverse
+
+
+/*----------------------------------------------------------
+ contents
+------------------------------------------------------------*/
+
+.contents
+  padding: 0
+  flex: 1
+
+
+/*----------------------------------------------------------
+ sidebar
+------------------------------------------------------------*/
+
+.sidebar
+  position: static
+  width: 20%
+  min-width: 220px
+  height: auto
+  margin-right: 15px
+  padding-right: 15px
+  padding-left: 0
+  background: none
+  opacity: 1
+
+.sidebar-nav
+  position: static
+  width: auto
+  height: auto
+  background: #333
+  border-radius: 5px 5px 0 0
+  box-shadow: 0 0 0
+  overflow-y: visible
+
+.sidebar-nav-title
+  font-size: 14px
+
+.sidebar-nav
+  li
+    a
+      padding-right: 10px
+      font-size: 12px
+      &:hover
+        background: #444
+      &:after
+        border-width: 0
+    &.current
+      a
+        &:after
+          right: -7px
+          width: 15px
+          height: 15px
+          margin-top: -8px
+          background: #333
+
+
+/*----------------------------------------------------------
+ footer
+------------------------------------------------------------*/
+
+.footer-btnPagetop
+  position: fixed
+  bottom: 20px
+  right: 20px
+  border-width: 0
+  a
+    width: 50px
+    height: 50px
+    border-radius: 50%
+    opacity: 0.5
+    &:after
+      top: 20px
+      margin-left: -8px
+
+.footer-inner
+  padding: 40px 0
+
+.footer-inner-nav + .footer-inner-nav
+  margin-top: 15px
+
+.footer-inner-attention
+  margin-top: 30px
+
+.footer-copyright
+  font-size: 14px
