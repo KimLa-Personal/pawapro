@@ -113,6 +113,140 @@
 
   App.ui = {
 
+    /**
+     * イメージギャラリー
+     */
+    imageGallery: (function() {
+      var constructor = function() {
+        this.$el = {};
+        this.$list = {};
+        this.$nav = {};
+        this.classNavActive = 'active';
+        this.activeNum = 0;
+        this.isAnimate = false;
+        return this;
+      };
+      var proto = constructor.prototype;
+      proto.init = function(args) {
+        this.activeNum = args.activeNum || this.activeNum;
+        this.setEl(args.el);
+        this.onInstance();
+        this.render();
+        return this;
+      };
+      proto.setEl = function(el) {
+        this.$el = $(el);
+        this.$list = this.$el.find('.js-imageGalleryList');
+        this.$listChild = this.$list.children();
+        this.$nav = this.$el.find('.js-imageGalleryNav');
+        return this;
+      };
+      proto.onInstance = function() {
+        this.$listChild.hide();
+        this.$listChild.eq(this.activeNum).show();
+        return this;
+      };
+      proto.render = function() {
+        var that = this;
+        var tmpl = [];
+        for(var i=0; i<this.$listChild.length; i++) {
+          tmpl.push('<li>' + (i+1) + '</li>');
+        }
+        this.$nav.append(tmpl.join('')).promise().done(function() {
+          that.onRender();
+        });
+        return this;
+      };
+      proto.onRender = function() {
+        this.$navChild = this.$nav.children();
+        this.$navChild.eq(this.activeNum).addClass(this.classNavActive);
+        this.setEvents();
+        return this;
+      };
+      proto.setEvents = function() {
+        var that = this;
+        this.$navChild.on('click', function() {
+          if(!that.isAnimate) {
+            that.onClickNavChild(this);
+            that.isAnimate = false;
+          }
+        });
+        return this;
+      };
+      proto.onClickNavChild = function(target) {
+        this.isAnimate = true;
+        this.$listChild.eq(this.activeNum).fadeOut();
+        this.$navChild.eq(this.activeNum).removeClass(this.classNavActive);
+        this.activeNum = $(target).index();
+        this.$listChild.eq(this.activeNum).fadeIn();
+        this.$navChild.eq(this.activeNum).addClass(this.classNavActive);
+        return this;
+      };
+      return constructor;
+    })(),
+
+    /**
+     * 切り替えコンテンツ
+     */
+    switchView: (function() {
+      var constructor = function() {
+        this.$el = {};
+        this.$nav = {};
+        this.$navChild = {};
+        this.$contents = {};
+        this.$contentsChild = {};
+        this.classActive = 'active';
+        this.isShowNum = 1;
+        this.isAnimate = false;
+        this.speedAnimate = 300;
+        return this;
+      };
+      var proto = constructor.prototype;
+      proto.init = function(args) {
+        this.isShowNum = args.isShowNum || this.isShowNum;
+        this.setEl(args.el);
+        this.onInstance();
+        this.setEvents();
+        return this;
+      };
+      proto.setEl = function(el) {
+        this.$el = $(el);
+        this.$nav = this.$el.find('.js-switchViewNav');
+        this.$navChild = this.$nav.children();
+        this.$contents = this.$el.find('.js-switchViewContents');
+        this.$contentsChild = this.$contents.children();
+        return this;
+      };
+      proto.onInstance = function() {
+        this.$contentsChild.hide();
+        this.$contentsChild.eq(this.isShowNum-1).show();
+        this.$navChild.eq(this.isShowNum-1).addClass(this.classActive);
+        return this;
+      };
+      proto.setEvents = function() {
+        var that = this;
+        this.$navChild.on('click', function() {
+          if(!that.isAnimate && !$(this).hasClass(that.classActive)) {
+            that.onClickNavChild(this);
+            that.isAnimate = false;
+          }
+        });
+        return this;
+      };
+      proto.onClickNavChild = function(target) {
+        this.isAnimate = true;
+        var that = this;
+        this.$navChild.eq(this.isShowNum-1).removeClass(this.classActive);
+        this.$contentsChild.eq(this.isShowNum-1).fadeOut(this.speedAnimate, function() {
+          that.isShowNum = $(target).index()+1;
+          that.$contentsChild.eq(that.isShowNum-1).fadeIn();
+          that.$navChild.eq(that.isShowNum-1).addClass(that.classActive);
+        });
+        return this;
+      };
+      return constructor;
+    })()
+
   };
 
 
