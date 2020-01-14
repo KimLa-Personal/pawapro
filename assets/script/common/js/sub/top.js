@@ -1,29 +1,25 @@
-/*--------------------------------------------------------------------
- top.js
-----------------------------------------------------------------------*/
+$(function() {
 
-(function() {
-
-  var global = APP.global;
-  var fn = APP.fn;
-  var ui = APP.ui;
-  var parse = APP.parse;
-  var utils = APP.utils;
-  var views = APP.views;
+  var global = App.global;
+  var fn = App.fn;
+  var ui = App.ui;
+  var utils = App.utils;
+  var views = App.views;
 
   /**
    * インスタンス
    */
-  var setViewInstance = function() {
+  var viewInstance = function() {
 
-    /* ページ */
-    new views.PageView('#PageView');
+
 
   };
 
+
+
   /* インスタンス */
   $(window).load(function() {
-    setViewInstance();
+    viewInstance();
   });
 
-})();
+});

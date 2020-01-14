@@ -30,16 +30,25 @@ module.exports = {
       },
       ejs: {
         src: [
-          'assets/%type%/templates/**/*.ejs',
-          '!assets/%type%/templates/_*/**/*.ejs'
+          'assets/%type%/templates/*.ejs',
+          '!assets/%type%/templates/_*/*.ejs'
         ],
-        watch: ['assets/%type%/templates/**/*.ejs'],
+        watch: ['assets/%type%/templates/*.ejs'],
         dest: 'dist/%type%'
       },
       js: {
-        src: 'assets/%type%/script/**/*.js',
+        src: [
+          'assets/%type%/script/**/*.js',
+          '!assets/%type%/script/**/_*/*.js'
+        ],
         watch: 'assets/%type%/**/*.js',
         dest: 'dist/%type%'
+      },
+      jsconcat: {
+        src: 'assets/%type%/script/**/_*/*.js',
+        watch: 'assets/%type%/**/_*/*.js',
+        dest: 'dist/%type%/common/js',
+        filename: 'common.js'
       },
       test: {
         src: [
@@ -56,11 +65,7 @@ module.exports = {
           to: 'dist/%type%'
         },
         {
-          from: 'assets/%type%/img/**/*',
-          to: 'dist/%type%'
-        },
-        {
-          from: 'assets/%type%/other/**/*',
+          from: 'assets/%type%/copy/**/*',
           to: 'dist/%type%'
         },
         {

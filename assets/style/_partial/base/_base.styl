@@ -1,17 +1,18 @@
 /*----------------------------------------------------------
- Fonts
+ Base
 ------------------------------------------------------------*/
 
 html
   overflow-y: scroll
 
 body, input, select, textarea
-  color: $colorTextBase
-  font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif
+  font-size: $font_size_default
+  color: $color_text_default
+  font-family: $font_family_pc
 
-@media screen and (min-width: $pcScreenMinWidth)
+@media $mq-mobile
   body, input, select, textarea
-    font-size: 75%
+    font-size: 100%
 
 h1, h2, h3, h4, h5, h6, th, td, small
   font-size: 100%
@@ -26,10 +27,12 @@ input, select, textarea
  Anchers
 ------------------------------------------------------------*/
 
-a:link, a:visited
-  color: #039
+a:link,
+a:visited
+  color: $color_text_link
   text-decoration: underline
 
-a:active, a:hover
-  color: #C33
+a:active,
+a:hover
+  color: $color_text_link_hover
   text-decoration: none

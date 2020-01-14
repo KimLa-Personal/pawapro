@@ -1,40 +1,27 @@
-<% var pageTitle = ''; %>
-<% var pageId = ''; %>
-<% var pathPartials = './_partials/'; %>
-<% //----------------------------------------- %>
+<% var pageTitle = '', pathPartials = './_partials/'; %>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
 <%- include(pathPartials + 'head', { title: pageTitle }) %>
-<link rel="stylesheet" type="text/css" href="/common/css/common.css">
-<link rel="stylesheet" type="text/css" href="/common/css/sub/top.css">
+<link rel="stylesheet" type="text/css" href="/common/css/top.css">
 </head>
 <body>
 
 <div class="page" id="PageView">
 
-  <%- include(pathPartials + 'header', { current: pageId }) %>
+  <%- include(pathPartials + 'header') %>
 
   <main class="main">
 
-    <div class="main-contents inner">
-
-      <section class="contents">
-        <p>ああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</p>
 
 
-
-      </section><!--/.contents -->
-
-    </div><!--/.inner -->
   </main>
 
   <%- include(pathPartials + 'footer') %>
 
 </div><!--/.page -->
 
-<script src="/common/js/lib/jquery-2.1.1.min.js"></script>
-<script src="/common/js/common.js"></script>
+<%- include(pathPartials + 'common_js') %>
 <script src="/common/js/sub/top.js"></script>
 </body>
 </html>
